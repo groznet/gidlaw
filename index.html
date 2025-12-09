@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр юридической помощи «ГиД» - Грозный</title>
+    <meta name="description" content="Профессиональная юридическая помощь в Грозном: консультации, судебное представительство, сопровождение сделок с недвижимостью, защита по уголовным делам.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D3B66',
+                        secondary: '#FAF0CA',
+                        accent: '#F95738',
+                        text: {
+                            primary: '#1B1B1B',
+                            secondary: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="text-soft-black">
+    <!-- Header -->
+    <header id="header" class="sticky-nav shadow-md"></header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Профессиональная юридическая помощь в Грозном</h1>
+                <p class="text-xl mb-10 opacity-90">Полный спектр юридических услуг — от консультаций и судебного представительства до сопровождения сделок с недвижимостью и защиты по уголовным делам. Индивидуальный подход к каждому клиенту.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/consultation" class="btn-accent px-8 py-4 rounded-lg font-bold text-lg text-center">
+                        Получить консультацию <i class="ml-2 fas fa-arrow-right"></i>
+                    </a>
+                    <a href="/services" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg text-center hover:bg-gray-100 transition">
+                        Наши услуги
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="py-10 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">500+</div>
+                    <div class="text-text-secondary">Успешных дел</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">15+</div>
+                    <div class="text-text-secondary">Лет опыта</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">98%</div>
+                    <div class="text-text-secondary">Довольных клиентов</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">24/7</div>
+                    <div class="text-text-secondary">Поддержка клиентов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Services -->
+    <section class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Наши ключевые услуги</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Мы предоставляем полный спектр юридических услуг для физических и юридических лиц</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Судебное представительство</h3>
+                    <p class="text-text-secondary mb-6">Защита ваших интересов в судах всех инстанций: гражданские, арбитражные, административные дела.</p>
+                    <a href="/services/sudebnoe-predstavitelstvo" class="text-primary font-semibold hover:text-accent transition">
+                        Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Сделки с недвижимостью</h3>
+                    <p class="text-text-secondary mb-6">Полное сопровождение сделок с квартирами, домами и земельными участками, проверка документов, составление договоров.</p>
+                    <a href="/services/sdelki-s-nedvizhimostyu" class="text-primary font-semibold hover:text-accent transition">
+                        Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Подготовка документов</h3>
+                    <p class="text-text-secondary mb-6">Составление договоров, исковых заявлений, претензий и других юридических документов любой сложности.</p>
+                    <a href="/services/podgotovka-dokumentov" class="text-primary font-semibold hover:text-accent transition">
+                        Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Защита по уголовным делам</h3>
+                    <p class="text-text-secondary mb-6">Квалифицированная защита на всех стадиях уголовного процесса, посещение СИЗО, сбор доказательств.</p>
+                    <a href="/services/ugolovnaya-zashchita" class="text-primary font-semibold hover:text-accent transition">
+                        Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Ипотечное сопровождение</h3>
+                    <p class="text-text-secondary mb-6">Помощь в получении и оформлении гражданской и военной ипотеки, сопровождение на всех этапах.</p>
+                    <a href="/services/ipotechnoe-soprovozhdenie" class="text-primary font-semibold hover:text-accent transition">
+                        Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Приватизация имущества</h3>
+                    <p class="text-text-secondary mb-6">Юридическое сопровождение процесса приватизации, получение разрешений на отчуждение долей несовершеннолетних.</p>
+                    <a href="/services/privatizatsiya-imushchestva" class="text-primary font-semibold hover:text-accent transition">
+                        Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="/services" class="btn-primary px-8 py-3 rounded-lg font-bold text-lg inline-block">
+                    Все услуги <i class="ml-2 fas fa-list"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Preview -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Почему выбирают нас?</h2>
+                    <div class="space-y-6 text-content">
+                        <p>Центр юридической помощи «ГИД» — это команда опытных юристов и адвокатов, которые предоставляют полный спектр юридических услуг в Грозном и Чеченской Республике.</p>
+                        <p>Наш подход основан на глубоком анализе каждой ситуации, разработке индивидуальной стратегии защиты интересов клиента и постоянном сопровождении на всех этапах решения правовых вопросов.</p>
+                        <p>Мы ценим доверие наших клиентов и стремимся обеспечить максимально эффективный результат при решении любых юридических задач.</p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="/about" class="btn-primary px-8 py-3 rounded-lg font-bold text-lg inline-block">
+                            Подробнее о нас
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-xl p-2">
+                        <div class="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fas fa-users text-primary text-6xl mb-6"></i>
+                                <h3 class="text-2xl font-bold text-primary mb-2">Профессиональная команда</h3>
+                                <p class="text-text-secondary">Опытные юристы и адвокаты с профильным образованием и практикой</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Нужна юридическая помощь?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">Запишитесь на бесплатную первичную консультацию к нашим специалистам. Мы проанализируем вашу ситуацию и предложим оптимальное решение.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="/consultation" class="btn-accent px-8 py-4 rounded-lg font-bold text-lg">
+                    Записаться на консультацию <i class="ml-2 fas fa-calendar-check"></i>
+                </a>
+                <a href="tel:+79252277771" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    Позвонить сейчас <i class="ml-2 fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Контакты</h2>
+                <p class="text-xl text-text-secondary">Свяжитесь с нами удобным для вас способом</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Address -->
+                <div class="contact-card p-8 rounded-xl">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Адрес офиса</h3>
+                    <p class="text-text-secondary">ул. Исаева, 91<br>Грозный, Чеченская Республика</p>
+                </div>
+                
+                <!-- Phone & Email -->
+                <div class="contact-card p-8 rounded-xl">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Телефон и Email</h3>
+                    <p class="text-text-secondary mb-2">
+                        <a href="tel:+79252277771" class="hover:text-accent transition">+7 (925) 227-77-71</a>
+                    </p>
+                    <p class="text-text-secondary">
+                        <a href="mailto:info@gidlaw.ru" class="hover:text-accent transition">info@gidlaw.ru</a>
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://t.me/gidlaw" class="text-primary hover:text-accent text-xl">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://wa.me/79252277771" class="text-primary hover:text-accent text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hours -->
+                <div class="contact-card p-8 rounded-xl">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Часы работы</h3>
+                    <p class="text-text-secondary">
+                        <span class="font-semibold">Пн-Пт:</span> 9:00 - 19:00<br>
+                        <span class="font-semibold">Сб:</span> 10:00 - 16:00<br>
+                        <span class="font-semibold">Вс:</span> По записи
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

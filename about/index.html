@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | Центр юридической помощи «ГиД» в Грозном</title>
+    <meta name="description" content="Центр юридической помощи «ГиД» — профессиональная команда юристов и адвокатов в Грозном. Наша миссия, ценности и опыт работы.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D3B66',
+                        secondary: '#FAF0CA',
+                        accent: '#F95738',
+                        text: {
+                            primary: '#1B1B1B',
+                            secondary: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            background-color: #FAF9F6;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: #0D3B66;
+            border-radius: 50%;
+            border: 4px solid #FAF0CA;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 2rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background-color: #e5e7eb;
+            z-index: -1;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .btn-primary {
+            background-color: #0D3B66;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0a2e4d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-accent {
+            background-color: #F95738;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e04d31;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(249, 87, 56, 0.25);
+        }
+        
+        .stat-card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .text-soft-black {
+            color: #2c2c2c;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .section-bg {
+            background-color: #FFFFFF;
+        }
+        
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-card {
+            background-color: #0D3B66;
+            color: white;
+            border-radius: 12px;
+            padding: 40px;
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="text-soft-black">
+    <!-- Header -->
+    <header id="header" class="sticky-nav shadow-md"></header>
+
+    <!-- Breadcrumb + Page Title Section -->
+    <section class="hero-bg text-white py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="flex mb-4" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="text-sm font-medium text-gray-300 hover:text-white transition">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <span class="mx-2 text-gray-400">/</span>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <span class="text-sm font-medium text-white">О нас</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Page Title -->
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">
+                О Центре юридической помощи «ГиД»
+            </h1>
+            <p class="text-lg opacity-90 max-w-3xl">
+                Профессиональная команда юристов и адвокатов с более чем 15-летним опытом работы в Грозном и Чеченской Республике
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-10 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">15+</div>
+                    <div class="text-text-secondary text-sm">Лет успешной работы</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">500+</div>
+                    <div class="text-text-secondary text-sm">Успешно завершенных дел</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">98%</div>
+                    <div class="text-text-secondary text-sm">Довольных клиентов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">12</div>
+                    <div class="text-text-secondary text-sm">Профессиональных юристов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company -->
+    <section class="py-16 section-bg">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Кто мы такие</h2>
+                    <div class="space-y-4 text-content">
+                        <p>Центр юридической помощи «ГиД» — это команда профессиональных юристов и адвокатов, оказывающих полный спектр юридических услуг в Грозном и Чеченской Республике с 2008 года.</p>
+                        <p>Название «ГиД» отражает нашу основную миссию: быть надежным проводником (Гидом) для наших клиентов в сложном мире законодательства, помогая им принимать правильные решения и защищать свои права.</p>
+                        <p>За годы работы мы накопили уникальный опыт в различных областях права, от сопровождения сделок с недвижимостью до защиты по уголовным делам. Наш подход основан на глубоком анализе каждой ситуации, разработке индивидуальной стратегии и постоянном сопровождении клиента на всех этапах решения правовых вопросов.</p>
+                        <p>Мы гордимся тем, что большинство наших клиентов приходят к нам по рекомендациям — это лучшая оценка нашей работы.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="bg-gray-200 h-80 md:h-96 rounded-lg flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <i class="fas fa-balance-scale text-primary text-6xl mb-6"></i>
+                            <h3 class="text-2xl font-bold text-primary mb-2">Центр юридической помощи «ГиД»</h3>
+                            <p class="text-text-secondary">Профессионализм, надежность, результат</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission & Values -->
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Наша миссия и ценности</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="mission-card">
+                        <div class="text-4xl mb-6">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Наша миссия</h3>
+                        <p>Обеспечивать доступную и квалифицированную юридическую помощь, защищая права и интересы наших клиентов, помогая им достигать поставленных целей в правовом поле с минимальными рисками и максимальной эффективностью.</p>
+                    </div>
+                    
+                    <div class="mission-card bg-accent">
+                        <div class="text-4xl mb-6">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Наше видение</h3>
+                        <p>Стать ведущим юридическим центром в Чеченской Республике, известным своим профессионализмом, надежностью и инновационными подходами к решению правовых задач.</p>
+                    </div>
+                </div>
+                
+                <!-- Values -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="value-card p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-3">Надежность</h4>
+                        <p class="text-text-secondary text-sm">Мы берем на себя ответственность за каждый случай и доводим дело до результата</p>
+                    </div>
+                    
+                    <div class="value-card p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-3">Профессионализм</h4>
+                        <p class="text-text-secondary text-sm">Наша команда состоит из дипломированных специалистов с опытом работы от 5 лет</p>
+                    </div>
+                    
+                    <div class="value-card p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-3">Конфиденциальность</h4>
+                        <p class="text-text-secondary text-sm">Все детали вашего дела защищены адвокатской тайной и не разглашаются</p>
+                    </div>
+                    
+                    <div class="value-card p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-3">Индивидуальный подход</h4>
+                        <p class="text-text-secondary text-sm">Для каждого клиента мы разрабатываем персональную стратегию решения вопроса</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- History Timeline -->
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Наша история</h2>
+                
+                <div class="max-w-3xl mx-auto">
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold text-primary mb-2">2008 год — Основание</h3>
+                        <p class="text-text-secondary">Основание юридической практики «ГиД» в Грозном. Начало работы с делами по недвижимости и гражданским спорам.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold text-primary mb-2">2012 год — Расширение команды</h3>
+                        <p class="text-text-secondary">К команде присоединились специалисты по уголовному праву. Начато направление по защите по уголовным делам.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold text-primary mb-2">2015 год — Новый офис</h3>
+                        <p class="text-text-secondary">Переезд в новый офис на ул. Исаева, 91. Расширение спектра услуг до полного юридического сопровождения бизнеса.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold text-primary mb-2">2018 год — 10 лет работы</h3>
+                        <p class="text-text-secondary">Отпраздновали 10-летие компании. Накопленный опыт — более 300 успешно завершенных дел.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold text-primary mb-2">2021 год — Цифровизация</h3>
+                        <p class="text-text-secondary">Запуск онлайн-консультаций и дистанционного обслуживания. Обновление сайта и цифровых сервисов.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-bold text-primary mb-2">2023 год — Настоящее время</h3>
+                        <p class="text-text-secondary">Более 500 успешных дел, команда из 12 профессиональных юристов, полный спектр юридических услуг.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Section -->
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Наша команда</h2>
+                <p class="text-text-secondary text-center max-w-3xl mx-auto mb-12">Профессиональные юристы и адвокаты с профильным образованием и практическим опытом работы от 5 лет</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user-tie text-6xl text-gray-500 mb-4"></i>
+                                <h4 class="font-bold text-primary">Муса А.</h4>
+                                <p class="text-sm text-text-secondary">Основатель, ведущий юрист</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-primary text-lg mb-3">Муса А.</h3>
+                            <p class="text-text-secondary text-sm mb-4">Основатель Центра «ГиД». Опыт работы — 15 лет. Специализация: сделки с недвижимостью, судебное представительство.</p>
+                            <div class="text-sm text-text-secondary">
+                                <div class="flex items-center mb-1">
+                                    <i class="fas fa-graduation-cap text-primary mr-2"></i>
+                                    <span>ЧГУ, юридический факультет</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-award text-primary mr-2"></i>
+                                    <span>Член Адвокатской палаты ЧР</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user-tie text-6xl text-gray-500 mb-4"></i>
+                                <h4 class="font-bold text-primary">Айшат М.</h4>
+                                <p class="text-sm text-text-secondary">Юрист по семейному праву</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-primary text-lg mb-3">Айшат М.</h3>
+                            <p class="text-text-secondary text-sm mb-4">Опыт работы — 8 лет. Специализация: семейные споры, наследственное право, защита прав несовершеннолетних.</p>
+                            <div class="text-sm text-text-secondary">
+                                <div class="flex items-center mb-1">
+                                    <i class="fas fa-graduation-cap text-primary mr-2"></i>
+                                    <span>МГУ, юридический факультет</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-award text-primary mr-2"></i>
+                                    <span>Сертифицированный медиатор</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user-tie text-6xl text-gray-500 mb-4"></i>
+                                <h4 class="font-bold text-primary">Ислам Б.</h4>
+                                <p class="text-sm text-text-secondary">Адвокат по уголовным делам</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-primary text-lg mb-3">Ислам Б.</h3>
+                            <p class="text-text-secondary text-sm mb-4">Опыт работы — 10 лет. Специализация: защита по уголовным делам, досудебное урегулирование, посещение СИЗО.</p>
+                            <div class="text-sm text-text-secondary">
+                                <div class="flex items-center mb-1">
+                                    <i class="fas fa-graduation-cap text-primary mr-2"></i>
+                                    <span>РУДН, юридический факультет</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-award text-primary mr-2"></i>
+                                    <span>Адвокатская палата г. Москва</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-text-secondary mb-6">В нашей команде работают еще 9 профессиональных юристов по различным направлениям права</p>
+                    <a href="/contact" class="btn-primary px-8 py-3 rounded-lg font-bold text-lg inline-block">
+                        Связаться с нами <i class="ml-2 fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificates & Achievements -->
+            <div class="bg-secondary rounded-2xl p-8 md:p-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Наши достижения и сертификаты</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Топ-10 юристов ЧР</h4>
+                        <p class="text-text-secondary text-sm">По версии журнала "Правовая Чечня" (2022)</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Лицензия Минюста</h4>
+                        <p class="text-text-secondary text-sm">Лицензия на адвокатскую деятельность №ЧР-0456</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Партнерство</h4>
+                        <p class="text-text-secondary text-sm">Официальный партнер Федеральной палаты адвокатов РФ</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Рейтинг 4.9/5</h4>
+                        <p class="text-text-secondary text-sm">Средняя оценка клиентов на независимых площадках</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Нужна профессиональная юридическая помощь?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">Запишитесь на консультацию к нашим специалистам и получите решение вашего юридического вопроса</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="/consultation" class="btn-accent px-8 py-4 rounded-lg font-bold text-lg">
+                    Записаться на консультацию <i class="ml-2 fas fa-calendar-check"></i>
+                </a>
+                <a href="/contact" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    Контакты <i class="ml-2 fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <script src="./../assets/js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('/components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+            
+            // Load footer
+            fetch('/components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+            
+            // Value card hover effect
+            const valueCards = document.querySelectorAll('.value-card');
+            valueCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Team card hover effect
+            const teamCards = document.querySelectorAll('.team-card');
+            teamCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Stat card hover effect
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейсы и истории успеха | Центр юридической помощи «ГиД»</title>
+    <meta name="description" content="Реальные кейсы и успешные дела юридического центра «ГиД» в Грозном. Примеры выигранных дел по недвижимости, судебным спорам, уголовным делам.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D3B66',
+                        secondary: '#FAF0CA',
+                        accent: '#F95738',
+                        text: {
+                            primary: '#1B1B1B',
+                            secondary: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            background-color: #FAF9F6;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .case-card {
+            transition: all 0.3s ease;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .case-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .case-tag-real-estate {
+            background-color: rgba(13, 59, 102, 0.1);
+            color: #0D3B66;
+        }
+        
+        .case-tag-court {
+            background-color: rgba(249, 87, 56, 0.1);
+            color: #F95738;
+        }
+        
+        .case-tag-criminal {
+            background-color: rgba(75, 85, 99, 0.1);
+            color: #4B5563;
+        }
+        
+        .case-tag-documents {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: #16A34A;
+        }
+        
+        .btn-primary {
+            background-color: #0D3B66;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0a2e4d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-accent {
+            background-color: #F95738;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e04d31;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(249, 87, 56, 0.25);
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #0D3B66;
+            color: white;
+            border-color: #0D3B66;
+        }
+        
+        .text-soft-black {
+            color: #2c2c2c;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .stat-card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .case-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .read-more-btn {
+            color: #0D3B66;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more-btn:hover {
+            color: #F95738;
+        }
+        
+        .testimonial-card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: "“";
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(13, 59, 102, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="text-soft-black">
+    <!-- Header -->
+    <header id="header" class="sticky-nav shadow-md"></header>
+
+    <!-- Breadcrumb + Page Title Section -->
+    <section class="hero-bg text-white py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="flex mb-4" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="text-sm font-medium text-gray-300 hover:text-white transition">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <span class="mx-2 text-gray-400">/</span>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <span class="text-sm font-medium text-white">Кейсы</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Page Title -->
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">
+                Кейсы и истории успеха
+            </h1>
+            <p class="text-lg opacity-90 max-w-3xl">
+                Реальные примеры выигранных дел и успешных решений юридических вопросов от Центра юридической помощи «ГиД»
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-10 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">87%</div>
+                    <div class="text-text-secondary text-sm">Выигранных судебных дел</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">156</div>
+                    <div class="text-text-secondary text-sm">Успешных сделок с недвижимостью</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">42</div>
+                    <div class="text-text-secondary text-sm">Закрытых уголовных дел</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl text-primary font-bold mb-2">350+</div>
+                    <div class="text-text-secondary text-sm">Подготовленных договоров</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Filter Buttons -->
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Наши успешные дела</h2>
+                <p class="text-text-secondary text-center max-w-3xl mx-auto mb-8">Мы представляем реальные примеры из нашей практики. Все имена и некоторые детали изменены в целях конфиденциальности.</p>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button class="filter-btn active" data-filter="all">Все кейсы</button>
+                    <button class="filter-btn" data-filter="real-estate">Недвижимость</button>
+                    <button class="filter-btn" data-filter="court">Судебные споры</button>
+                    <button class="filter-btn" data-filter="criminal">Уголовные дела</button>
+                    <button class="filter-btn" data-filter="documents">Документы</button>
+                </div>
+            </div>
+            
+            <!-- Cases Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="casesGrid">
+                <!-- Case 1: Real Estate -->
+                <div class="case-card rounded-xl shadow-lg" data-category="real-estate">
+                    <div class="case-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="case-tag case-tag-real-estate">Недвижимость</span>
+                            <span class="case-tag case-tag-documents">Документы</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Восстановление права собственности на квартиру</h3>
+                        <p class="text-text-secondary mb-4">Клиент купил квартиру, но через 2 года обнаружил, что предыдущий собственник не имел права на продажу из-за отсутствия согласия супруга.</p>
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-text-secondary">Срок решения:</span>
+                                <span class="font-semibold">3 месяца</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Результат:</span>
+                                <span class="font-semibold text-green-600">Квартира возвращена</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more-btn">
+                            Читать полностью <i class="ml-2 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 2: Court Dispute -->
+                <div class="case-card rounded-xl shadow-lg" data-category="court">
+                    <div class="case-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="case-tag case-tag-court">Судебный спор</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Взыскание долга по договору займа</h3>
+                        <p class="text-text-secondary mb-4">Клиент предоставил заём в размере 1,5 млн рублей, но заёмщик отказался возвращать деньги. Договор был составлен без участия юриста.</p>
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-text-secondary">Срок решения:</span>
+                                <span class="font-semibold">5 месяцев</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Результат:</span>
+                                <span class="font-semibold text-green-600">Долг взыскан + проценты</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more-btn">
+                            Читать полностью <i class="ml-2 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 3: Criminal Case -->
+                <div class="case-card rounded-xl shadow-lg" data-category="criminal">
+                    <div class="case-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="case-tag case-tag-criminal">Уголовное дело</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Защита по обвинению в мошенничестве</h3>
+                        <p class="text-text-secondary mb-4">Клиент, индивидуальный предприниматель, был обвинен в мошенничестве на сумму 2 млн рублей при выполнении строительных работ.</p>
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-text-secondary">Срок решения:</span>
+                                <span class="font-semibold">8 месяцев</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Результат:</span>
+                                <span class="font-semibold text-green-600">Дело прекращено</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more-btn">
+                            Читать полностью <i class="ml-2 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 4: Real Estate -->
+                <div class="case-card rounded-xl shadow-lg" data-category="real-estate">
+                    <div class="case-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="case-tag case-tag-real-estate">Недвижимость</span>
+                            <span class="case-tag case-tag-documents">Документы</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Оспаривание кадастровой стоимости земельного участка</h3>
+                        <p class="text-text-secondary mb-4">Клиент приобрел земельный участок, но кадастровая стоимость была завышена на 40%, что приводило к чрезмерному налогообложению.</p>
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-text-secondary">Срок решения:</span>
+                                <span class="font-semibold">4 месяца</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Результат:</span>
+                                <span class="font-semibold text-green-600">Стоимость снижена на 35%</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more-btn">
+                            Читать полностью <i class="ml-2 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 5: Documents -->
+                <div class="case-card rounded-xl shadow-lg" data-category="documents">
+                    <div class="case-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="case-tag case-tag-documents">Документы</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Оформление наследства с зарубежными активами</h3>
+                        <p class="text-text-secondary mb-4">Клиент унаследовал имущество в России и банковские счета в Европе. Требовалось оформление документов для разных юрисдикций.</p>
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-text-secondary">Срок решения:</span>
+                                <span class="font-semibold">6 месяцев</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Результат:</span>
+                                <span class="font-semibold text-green-600">Наследство оформлено</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more-btn">
+                            Читать полностью <i class="ml-2 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 6: Court Dispute -->
+                <div class="case-card rounded-xl shadow-lg" data-category="court">
+                    <div class="case-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="case-tag case-tag-court">Судебный спор</span>
+                            <span class="case-tag case-tag-real-estate">Недвижимость</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Раздел совместно нажитого имущества при разводе</h3>
+                        <p class="text-text-secondary mb-4">Судебный спор о разделе квартиры, автомобиля и бизнеса при разводе супругов. Одна сторона пыталась скрыть часть активов.</p>
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-text-secondary">Срок решения:</span>
+                                <span class="font-semibold">10 месяцев</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Результат:</span>
+                                <span class="font-semibold text-green-600">Справедливый раздел</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more-btn">
+                            Читать полностью <i class="ml-2 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center">
+                <button id="loadMoreBtn" class="btn-primary px-8 py-3 rounded-lg font-bold text-lg">
+                    Показать еще кейсы <i class="ml-2 fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-12 text-center">Отзывы наших клиентов</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                                АС
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Александр С.</h4>
+                                <p class="text-sm text-text-secondary">Дело по недвижимости</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary italic">"Благодаря юристам «ГиД» смог вернуть квартиру, которую у меня пытались отобрать мошенники. Работали быстро, профессионально, всегда на связи. Рекомендую!"</p>
+                    </div>
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                                МР
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Марина Р.</h4>
+                                <p class="text-sm text-text-secondary">Семейный спор</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary italic">"При разводе муж пытался скрыть часть имущества. Юристы Центра не только помогли справедливо разделить имущество, но и сохранили мой бизнес. Огромная благодарность!"</p>
+                    </div>
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                                ИК
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Игорь К.</h4>
+                                <p class="text-sm text-text-secondary">Уголовное дело</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary italic">"Попал в сложную ситуацию по уголовному делу. Адвокаты из «ГиД» взялись за мою защиту, когда другие отказывались. В результате дело прекратили. Спасибо за профессионализм!"</p>
+                    </div>
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="/consultation" class="btn-accent px-8 py-4 rounded-lg font-bold text-lg inline-block">
+                    Хочу такой же результат <i class="ml-2 fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Хотите стать нашим следующим успешным кейсом?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">Оставьте заявку на консультацию, и мы поможем решить вашу юридическую проблему</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="/consultation" class="btn-accent px-8 py-4 rounded-lg font-bold text-lg">
+                    Записаться на консультацию <i class="ml-2 fas fa-calendar-check"></i>
+                </a>
+                <a href="tel:+79252277771" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    Позвонить сейчас <i class="ml-2 fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <script src="./../assets/js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('/components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+            
+            // Load footer
+            fetch('/components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+            
+            // Case filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const caseCards = document.querySelectorAll('.case-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide case cards based on filter
+                    caseCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Load more cases
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    // In a real project, this would load more cases from an API
+                    // For now, we'll simulate loading
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Загрузка...';
+                    this.disabled = true;
+                    
+                    setTimeout(() => {
+                        // Simulate adding more cases
+                        const newCases = [
+                            {
+                                category: 'real-estate',
+                                title: 'Оспаривание договора дарения недвижимости',
+                                description: 'Клиент подарил квартиру родственнику, который впоследствии отказался ухаживать за ним, как было обещано устно.',
+                                duration: '4 месяца',
+                                result: 'Дарение отменено'
+                            },
+                            {
+                                category: 'documents',
+                                title: 'Оформление разрешения на строительство',
+                                description: 'Клиент приобрел земельный участок, но местная администрация отказывалась выдавать разрешение на строительство дома.',
+                                duration: '2 месяца',
+                                result: 'Разрешение получено'
+                            },
+                            {
+                                category: 'court',
+                                title: 'Взыскание убытков с застройщика',
+                                description: 'Клиент купил квартиру в новостройке, но застройщик нарушил сроки сдачи и допустил строительные дефекты.',
+                                duration: '7 месяцев',
+                                result: 'Убытки взысканы + неустойка'
+                            }
+                        ];
+                        
+                        // Create and append new case cards
+                        const casesGrid = document.getElementById('casesGrid');
+                        
+                        newCases.forEach((caseItem, index) => {
+                            const caseId = casesGrid.children.length + 1;
+                            const categoryClass = `case-tag-${caseItem.category}`;
+                            const categoryName = 
+                                caseItem.category === 'real-estate' ? 'Недвижимость' :
+                                caseItem.category === 'court' ? 'Судебный спор' :
+                                caseItem.category === 'criminal' ? 'Уголовное дело' : 'Документы';
+                            
+                            const caseCard = document.createElement('div');
+                            caseCard.className = 'case-card rounded-xl shadow-lg';
+                            caseCard.setAttribute('data-category', caseItem.category);
+                            caseCard.style.opacity = '0';
+                            caseCard.style.transform = 'translateY(20px)';
+                            caseCard.style.transition = 'all 0.5s ease';
+                            
+                            // Random image from Unsplash based on category
+                            const imageUrls = {
+                                'real-estate': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                                'court': 'https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                                'criminal': 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                                'documents': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                            };
+                            
+                            caseCard.innerHTML = `
+                                <div class="case-image rounded-t-xl" style="background-image: url('${imageUrls[caseItem.category]}');"></div>
+                                <div class="p-6">
+                                    <div class="mb-4">
+                                        <span class="case-tag ${categoryClass}">${categoryName}</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-primary mb-3">${caseItem.title}</h3>
+                                    <p class="text-text-secondary mb-4">${caseItem.description}</p>
+                                    <div class="mb-6">
+                                        <div class="flex justify-between mb-2">
+                                            <span class="text-sm text-text-secondary">Срок решения:</span>
+                                            <span class="font-semibold">${caseItem.duration}</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-sm text-text-secondary">Результат:</span>
+                                            <span class="font-semibold text-green-600">${caseItem.result}</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="read-more-btn">
+                                        Читать полностью <i class="ml-2 fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            `;
+                            
+                            casesGrid.appendChild(caseCard);
+                            
+                            // Animate in
+                            setTimeout(() => {
+                                caseCard.style.opacity = '1';
+                                caseCard.style.transform = 'translateY(0)';
+                            }, 100 * index);
+                        });
+                        
+                        // Reset button
+                        loadMoreBtn.innerHTML = 'Показать еще кейсы <i class="ml-2 fas fa-plus"></i>';
+                        loadMoreBtn.disabled = false;
+                        
+                        // Hide button after showing all cases (simulation)
+                        setTimeout(() => {
+                            loadMoreBtn.style.display = 'none';
+                        }, 3000);
+                        
+                    }, 1500);
+                });
+            }
+            
+            // Case card hover effect
+            caseCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>

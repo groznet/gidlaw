@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юридические услуги в Грозном | Центр «ГиД»</title>
+    <meta name="description" content="Полный спектр юридических услуг в Грозном: судебное представительство, сопровождение сделок с недвижимостью, защита по уголовным делам, подготовка документов, ипотечное сопровождение.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D3B66',
+                        secondary: '#FAF0CA',
+                        accent: '#F95738',
+                        text: {
+                            primary: '#1B1B1B',
+                            secondary: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            background-color: #FAF9F6;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.9)), url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            background-color: #FFFFFF;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #0D3B66;
+        }
+        
+        .btn-primary {
+            background-color: #0D3B66;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0a2e4d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-accent {
+            background-color: #F95738;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e04d31;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(249, 87, 56, 0.25);
+        }
+        
+        .process-step {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .process-step::before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: #0D3B66;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .text-soft-black {
+            color: #2c2c2c;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="text-soft-black">
+    <!-- Header -->
+    <header id="header" class="sticky-nav shadow-md"></header>
+
+    <!-- Breadcrumb + Page Title Section -->
+    <section class="hero-bg text-white py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="flex mb-4" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="text-sm font-medium text-gray-300 hover:text-white transition">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <span class="mx-2 text-gray-400">/</span>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <span class="text-sm font-medium text-white">Услуги</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Page Title -->
+            <h1 class="text-xl md:text-3xl font-bold">
+                Наши юридические услуги
+            </h1>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="py-10 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">500+</div>
+                    <div class="text-text-secondary">Успешных дел</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">15+</div>
+                    <div class="text-text-secondary">Лет опыта</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">98%</div>
+                    <div class="text-text-secondary">Довольных клиентов</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-4xl text-primary font-bold mb-2">24/7</div>
+                    <div class="text-text-secondary">Поддержка клиентов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Services -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Полный спектр юридических услуг</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Мы предлагаем комплексное юридическое сопровождение для физических и юридических лиц по всем направлениям права</p>
+            </div>
+            
+            <!-- Main Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Service 1: Судебное представительство -->
+                <div class="service-card rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Судебное представительство</h3>
+                    <p class="text-text-secondary mb-6">Защита ваших интересов в судах всех инстанций. Гражданские, арбитражные, административные дела любой сложности.</p>
+                    <ul class="mb-6 space-y-2 text-text-secondary">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Представительство в судах всех инстанций</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Составление исковых заявлений и отзывов</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Участие в судебных заседаниях</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <a href="/services/sudebnoe-predstavitelstvo" class="text-primary font-semibold hover:text-accent transition">
+                            Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                        </a>
+                        <span class="text-accent font-bold">от 15 000 ₽</span>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Сделки с недвижимостью -->
+                <div class="service-card rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Сделки с недвижимостью</h3>
+                    <p class="text-text-secondary mb-6">Полное юридическое сопровождение сделок с недвижимостью: квартиры, дома, земельные участки, коммерческая недвижимость.</p>
+                    <ul class="mb-6 space-y-2 text-text-secondary">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Проверка юридической чистоты объектов</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Составление и анализ договоров</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Сопровождение регистрации в Росреестре</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <a href="/services/sdelki-s-nedvizhimostyu" class="text-primary font-semibold hover:text-accent transition">
+                            Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                        </a>
+                        <span class="text-accent font-bold">от 20 000 ₽</span>
+                    </div>
+                </div>
+                
+                <!-- Service 3: Подготовка документов -->
+                <div class="service-card rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Подготовка документов</h3>
+                    <p class="text-text-secondary mb-6">Составление, проверка и анализ любых юридических документов: договоры, претензии, исковые заявления, соглашения.</p>
+                    <ul class="mb-6 space-y-2 text-text-secondary">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Разработка индивидуальных договоров</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Проверка документов на соответствие закону</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Составление претензий и исковых заявлений</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <a href="/services/podgotovka-dokumentov" class="text-primary font-semibold hover:text-accent transition">
+                            Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                        </a>
+                        <span class="text-accent font-bold">от 5 000 ₽</span>
+                    </div>
+                </div>
+                
+                <!-- Service 4: Защита по уголовным делам -->
+                <div class="service-card rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Защита по уголовным делам</h3>
+                    <p class="text-text-secondary mb-6">Квалифицированная защита на всех стадиях уголовного процесса: от доследственной проверки до обжалования приговора.</p>
+                    <ul class="mb-6 space-y-2 text-text-secondary">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Защита на досудебной стадии</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Посещение СИЗО и ИВС</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Участие в судебных заседаниях</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <a href="/services/ugolovnaya-zashchita" class="text-primary font-semibold hover:text-accent transition">
+                            Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                        </a>
+                        <span class="text-accent font-bold">от 25 000 ₽</span>
+                    </div>
+                </div>
+                
+                <!-- Service 5: Ипотечное сопровождение -->
+                <div class="service-card rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Ипотечное сопровождение</h3>
+                    <p class="text-text-secondary mb-6">Юридическое сопровождение оформления ипотеки: гражданская и военная ипотека, рефинансирование, досрочное погашение.</p>
+                    <ul class="mb-6 space-y-2 text-text-secondary">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Подбор оптимальной ипотечной программы</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Проверка документов от банка</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Сопровождение сделки с недвижимостью</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <a href="/services/ipotechnoe-soprovozhdenie" class="text-primary font-semibold hover:text-accent transition">
+                            Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                        </a>
+                        <span class="text-accent font-bold">от 15 000 ₽</span>
+                    </div>
+                </div>
+                
+                <!-- Service 6: Приватизация имущества -->
+                <div class="service-card rounded-xl shadow-lg p-8">
+                    <div class="text-primary text-4xl mb-6">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Приватизация имущества</h3>
+                    <p class="text-text-secondary mb-6">Юридическое сопровождение приватизации жилья и другого имущества, получение разрешений на отчуждение долей несовершеннолетних.</p>
+                    <ul class="mb-6 space-y-2 text-text-secondary">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Оформление приватизации жилья</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Получение разрешений от органов опеки</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Регистрация права собственности</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <a href="/services/privatizatsiya-imushchestva" class="text-primary font-semibold hover:text-accent transition">
+                            Подробнее <i class="ml-1 fas fa-arrow-right"></i>
+                        </a>
+                        <span class="text-accent font-bold">от 10 000 ₽</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Services -->
+            <div class="bg-secondary rounded-2xl p-8 md:p-12 mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-6">Дополнительные услуги</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl">
+                        <div class="text-primary text-2xl mb-4">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Юридические консультации</h4>
+                        <p class="text-text-secondary text-sm">Устные и письменные консультации по любым правовым вопросам</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl">
+                        <div class="text-primary text-2xl mb-4">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Абонентское обслуживание</h4>
+                        <p class="text-text-secondary text-sm">Постоянное юридическое сопровождение для бизнеса</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl">
+                        <div class="text-primary text-2xl mb-4">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Автоюрист</h4>
+                        <p class="text-text-secondary text-sm">Помощь при ДТП, споры со страховыми компаниями</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl">
+                        <div class="text-primary text-2xl mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">Семейные споры</h4>
+                        <p class="text-text-secondary text-sm">Развод, раздел имущества, алименты, определение места жительства детей</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- How We Work -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center">Как мы работаем</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                        <h4 class="font-bold text-primary mb-2">Консультация</h4>
+                        <p class="text-text-secondary text-sm">Анализируем вашу ситуацию, определяем пути решения</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                        <h4 class="font-bold text-primary mb-2">Стратегия</h4>
+                        <p class="text-text-secondary text-sm">Разрабатываем индивидуальную стратегию защиты</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                        <h4 class="font-bold text-primary mb-2">Реализация</h4>
+                        <p class="text-text-secondary text-sm">Выполняем все необходимые юридические действия</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                        <h4 class="font-bold text-primary mb-2">Результат</h4>
+                        <p class="text-text-secondary text-sm">Добиваемся желаемого результата для клиента</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="bg-primary text-white rounded-2xl p-8 md:p-12 text-center">
+                <h3 class="text-2xl md:text-3xl font-bold mb-6">Нужна юридическая помощь?</h3>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Запишитесь на бесплатную первичную консультацию. Мы проанализируем вашу ситуацию и предложим оптимальное решение.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="/consultation" class="btn-accent px-8 py-4 rounded-lg font-bold text-lg">
+                        Записаться на консультацию <i class="ml-2 fas fa-calendar-check"></i>
+                    </a>
+                    <a href="tel:+79252277771" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                        Позвонить сейчас <i class="ml-2 fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <script src="./../assets/js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        
+        // Service card interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог о юридических вопросах | Центр «ГиД» Грозный</title>
+    <meta name="description" content="Полезные статьи и юридические советы от Центра «ГиД». Новости законодательства, разбор сложных случаев, ответы на вопросы о недвижимости, судах, документах.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D3B66',
+                        secondary: '#FAF0CA',
+                        accent: '#F95738',
+                        text: {
+                            primary: '#1B1B1B',
+                            secondary: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+            background-color: #FAF9F6;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.9)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .blog-card {
+            transition: all 0.3s ease;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blog-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .blog-tag-news {
+            background-color: rgba(249, 87, 56, 0.1);
+            color: #F95738;
+        }
+        
+        .blog-tag-real-estate {
+            background-color: rgba(13, 59, 102, 0.1);
+            color: #0D3B66;
+        }
+        
+        .blog-tag-law {
+            background-color: rgba(75, 85, 99, 0.1);
+            color: #4B5563;
+        }
+        
+        .blog-tag-documents {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: #16A34A;
+        }
+        
+        .blog-tag-tips {
+            background-color: rgba(168, 85, 247, 0.1);
+            color: #8B5CF6;
+        }
+        
+        .btn-primary {
+            background-color: #0D3B66;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0a2e4d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-accent {
+            background-color: #F95738;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e04d31;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(249, 87, 56, 0.25);
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #0D3B66;
+            color: white;
+            border-color: #0D3B66;
+        }
+        
+        .text-soft-black {
+            color: #2c2c2c;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .blog-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .read-time {
+            display: inline-flex;
+            align-items: center;
+            color: #6B7280;
+            font-size: 0.875rem;
+        }
+        
+        .sidebar-widget {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .search-input {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px 16px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            border-color: #0D3B66;
+            box-shadow: 0 0 0 3px rgba(13, 59, 102, 0.1);
+            outline: none;
+        }
+        
+        .popular-post {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .popular-post:last-child {
+            border-bottom: none;
+        }
+        
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination-btn:hover, .pagination-btn.active {
+            background-color: #0D3B66;
+            color: white;
+            border-color: #0D3B66;
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+            color: #4B5563;
+            transition: all 0.3s ease;
+        }
+        
+        .category-item:hover {
+            color: #0D3B66;
+        }
+        
+        .category-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="text-soft-black">
+    <!-- Header -->
+    <header id="header" class="sticky-nav shadow-md"></header>
+
+    <!-- Breadcrumb + Page Title Section -->
+    <section class="hero-bg text-white py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="flex mb-4" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="text-sm font-medium text-gray-300 hover:text-white transition">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <span class="mx-2 text-gray-400">/</span>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <span class="text-sm font-medium text-white">Блог</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Page Title -->
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">
+                Юридический блог
+            </h1>
+            <p class="text-lg opacity-90 max-w-3xl">
+                Полезные статьи, новости законодательства и юридические советы от специалистов Центра «ГиД»
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Content -->
+                <div class="lg:w-2/3">
+                    <!-- Filter Buttons -->
+                    <div class="mb-10">
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <button class="filter-btn active" data-filter="all">Все статьи</button>
+                            <button class="filter-btn" data-filter="news">Новости</button>
+                            <button class="filter-btn" data-filter="real-estate">Недвижимость</button>
+                            <button class="filter-btn" data-filter="law">Законодательство</button>
+                            <button class="filter-btn" data-filter="documents">Документы</button>
+                            <button class="filter-btn" data-filter="tips">Советы</button>
+                        </div>
+                        
+                        <!-- Search Bar -->
+                        <div class="relative mb-8">
+                            <input type="text" id="blogSearch" placeholder="Поиск по статьям..." class="search-input">
+                            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Article -->
+                    <div class="blog-card mb-12">
+                        <div class="blog-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="p-8">
+                            <div class="mb-4">
+                                <span class="blog-tag blog-tag-news">Новости</span>
+                                <span class="blog-tag blog-tag-real-estate">Недвижимость</span>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Изменения в законодательстве о сделках с недвижимостью в 2024 году</h2>
+                            <div class="flex items-center text-text-secondary text-sm mb-6">
+                                <span class="mr-4"><i class="far fa-calendar mr-1"></i> 15 декабря 2023</span>
+                                <span class="mr-4"><i class="far fa-user mr-1"></i> Муса А.</span>
+                                <span class="read-time"><i class="far fa-clock mr-1"></i> 7 мин чтения</span>
+                            </div>
+                            <p class="text-text-secondary mb-6">В 2024 году вступают в силу важные изменения в законодательстве о сделках с недвижимостью. Эти нововведения коснутся как покупателей, так и продавцов жилья. В статье мы разберем ключевые изменения и дадим практические рекомендации.</p>
+                            <a href="/blog/2023/12/izmeneniya-zakonodatelstva-nedvizhimost-2024" class="btn-primary px-6 py-3 rounded-lg font-semibold inline-block">
+                                Читать статью <i class="ml-2 fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Articles Grid -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-12" id="articlesGrid">
+                        <!-- Article 1 -->
+                        <div class="blog-card" data-category="documents">
+                            <div class="blog-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="p-6">
+                                <div class="mb-4">
+                                    <span class="blog-tag blog-tag-documents">Документы</span>
+                                    <span class="blog-tag blog-tag-tips">Советы</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary mb-3">Как правильно составить договор купли-продажи квартиры</h3>
+                                <p class="text-text-secondary mb-4">Пошаговая инструкция по составлению договора купли-продажи недвижимости. Какие пункты обязательно включить, на что обратить внимание, как избежать распространенных ошибок.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-text-secondary text-sm">
+                                        <span><i class="far fa-calendar mr-1"></i> 10 декабря 2023</span>
+                                    </div>
+                                    <a href="/blog/2023/12/kak-sostavit-dogovor-kupli-prodazhi-kvartiry" class="text-primary font-semibold hover:text-accent transition">
+                                        Читать <i class="ml-1 fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 2 -->
+                        <div class="blog-card" data-category="law">
+                            <div class="blog-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="p-6">
+                                <div class="mb-4">
+                                    <span class="blog-tag blog-tag-law">Законодательство</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary mb-3">Новые правила наследования: что изменилось в 2023 году</h3>
+                                <p class="text-text-secondary mb-4">Обзор изменений в наследственном законодательстве. Как теперь оформлять наследство, какие сроки установлены, как уменьшить размер госпошлины.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-text-secondary text-sm">
+                                        <span><i class="far fa-calendar mr-1"></i> 5 декабря 2023</span>
+                                    </div>
+                                    <a href="/blog/2023/12/novye-pravila-nasledovaniya-2023" class="text-primary font-semibold hover:text-accent transition">
+                                        Читать <i class="ml-1 fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 3 -->
+                        <div class="blog-card" data-category="real-estate">
+                            <div class="blog-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="p-6">
+                                <div class="mb-4">
+                                    <span class="blog-tag blog-tag-real-estate">Недвижимость</span>
+                                    <span class="blog-tag blog-tag-tips">Советы</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary mb-3">Проверка юридической чистоты квартиры перед покупкой</h3>
+                                <p class="text-text-secondary mb-4">Как самостоятельно проверить квартиру перед покупкой. Какие документы запросить у продавца, какие базы данных проверить, какие "красные флаги" должны насторожить.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-text-secondary text-sm">
+                                        <span><i class="far fa-calendar mr-1"></i> 28 ноября 2023</span>
+                                    </div>
+                                    <a href="/blog/2023/11/proverka-yuridicheskoj-chistoty-kvartiry" class="text-primary font-semibold hover:text-accent transition">
+                                        Читать <i class="ml-1 fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 4 -->
+                        <div class="blog-card" data-category="tips">
+                            <div class="blog-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="p-6">
+                                <div class="mb-4">
+                                    <span class="blog-tag blog-tag-tips">Советы</span>
+                                    <span class="blog-tag blog-tag-law">Законодательство</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary mb-3">Что делать при ДТП: пошаговая инструкция от юриста</h3>
+                                <p class="text-text-secondary mb-4">Полный алгоритм действий при ДТП. Какие документы оформить, как вести переговоры со страховой компанией, когда нужно обращаться в суд.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-text-secondary text-sm">
+                                        <span><i class="far fa-calendar mr-1"></i> 20 ноября 2023</span>
+                                    </div>
+                                    <a href="/blog/2023/11/chto-delat-pri-dtp-poshagovaya-instruktsiya" class="text-primary font-semibold hover:text-accent transition">
+                                        Читать <i class="ml-1 fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 5 -->
+                        <div class="blog-card" data-category="documents">
+                            <div class="blog-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="p-6">
+                                <div class="mb-4">
+                                    <span class="blog-tag blog-tag-documents">Документы</span>
+                                    <span class="blog-tag blog-tag-real-estate">Недвижимость</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary mb-3">Как оформить ипотеку с минимальными рисками</h3>
+                                <p class="text-text-secondary mb-4">Юридические аспекты оформления ипотеки. На что обратить внимание в договоре с банком, как проверить документы по недвижимости, как защитить свои права.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-text-secondary text-sm">
+                                        <span><i class="far fa-calendar mr-1"></i> 15 ноября 2023</span>
+                                    </div>
+                                    <a href="/blog/2023/11/kak-oformit-ipoteku-s-minimalnymi-riskami" class="text-primary font-semibold hover:text-accent transition">
+                                        Читать <i class="ml-1 fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article 6 -->
+                        <div class="blog-card" data-category="news">
+                            <div class="blog-image rounded-t-xl" style="background-image: url('https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="p-6">
+                                <div class="mb-4">
+                                    <span class="blog-tag blog-tag-news">Новости</span>
+                                    <span class="blog-tag blog-tag-law">Законодательство</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary mb-3">Изменения в Уголовном кодексе РФ в 2023 году</h3>
+                                <p class="text-text-secondary mb-4">Обзор ключевых изменений в уголовном законодательстве. Какие статьи изменились, как это повлияет на правоприменительную практику, что важно знать гражданам.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-text-secondary text-sm">
+                                        <span><i class="far fa-calendar mr-1"></i> 10 ноября 2023</span>
+                                    </div>
+                                    <a href="/blog/2023/11/izmeneniya-v-ugolovnom-kodekse-2023" class="text-primary font-semibold hover:text-accent transition">
+                                        Читать <i class="ml-1 fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="flex justify-center items-center space-x-2 mb-12">
+                        <button class="pagination-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <span class="mx-2">...</span>
+                        <button class="pagination-btn">8</button>
+                        <button class="pagination-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Newsletter Subscription -->
+                    <div class="bg-secondary rounded-2xl p-8 text-center">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Подпишитесь на нашу рассылку</h3>
+                        <p class="text-text-secondary mb-6 max-w-2xl mx-auto">Получайте полезные юридические советы, новости законодательства и анонсы мероприятий прямо на вашу почту</p>
+                        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                            <input type="email" placeholder="Ваш email" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <button type="submit" class="btn-primary px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                                Подписаться
+                            </button>
+                        </form>
+                        <p class="text-sm text-text-secondary mt-4">Подписываясь, вы соглашаетесь с нашей <a href="/privacy" class="text-primary hover:underline">политикой конфиденциальности</a></p>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="lg:w-1/3">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="text-xl font-bold text-primary mb-4">Поиск по блогу</h3>
+                        <div class="relative">
+                            <input type="text" placeholder="Введите запрос..." class="search-input">
+                            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="text-xl font-bold text-primary mb-4">Категории</h3>
+                        <div>
+                            <a href="#" class="category-item">
+                                <span>Недвижимость</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">12</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <span>Законодательство</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">8</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <span>Документы</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">15</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <span>Советы</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">10</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <span>Новости</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">6</span>
+                            </a>
+                            <a href="#" class="category-item">
+                                <span>Судебная практика</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">7</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Popular Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="text-xl font-bold text-primary mb-4">Популярные статьи</h3>
+                        <div>
+                            <a href="#" class="popular-post">
+                                <div class="w-16 h-16 bg-gray-200 rounded-lg mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Как уменьшить налог на недвижимость</h4>
+                                    <p class="text-text-secondary text-sm">5 декабря 2023</p>
+                                </div>
+                            </a>
+                            <a href="#" class="popular-post">
+                                <div class="w-16 h-16 bg-gray-200 rounded-lg mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Раздел имущества при разводе</h4>
+                                    <p class="text-text-secondary text-sm">28 ноября 2023</p>
+                                </div>
+                            </a>
+                            <a href="#" class="popular-post">
+                                <div class="w-16 h-16 bg-gray-200 rounded-lg mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Защита прав потребителей</h4>
+                                    <p class="text-text-secondary text-sm">20 ноября 2023</p>
+                                </div>
+                            </a>
+                            <a href="#" class="popular-post">
+                                <div class="w-16 h-16 bg-gray-200 rounded-lg mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Оформление наследства</h4>
+                                    <p class="text-text-secondary text-sm">15 ноября 2023</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="text-xl font-bold text-primary mb-4">Теги</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="blog-tag blog-tag-real-estate">Недвижимость</a>
+                            <a href="#" class="blog-tag blog-tag-law">Законодательство</a>
+                            <a href="#" class="blog-tag blog-tag-documents">Документы</a>
+                            <a href="#" class="blog-tag blog-tag-news">Новости</a>
+                            <a href="#" class="blog-tag blog-tag-tips">Советы</a>
+                            <a href="#" class="blog-tag blog-tag-real-estate">Квартира</a>
+                            <a href="#" class="blog-tag blog-tag-law">Суд</a>
+                            <a href="#" class="blog-tag blog-tag-documents">Договор</a>
+                            <a href="#" class="blog-tag blog-tag-tips">Ипотека</a>
+                            <a href="#" class="blog-tag blog-tag-law">Наследство</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Consultation CTA -->
+                    <div class="sidebar-widget bg-primary text-white">
+                        <h3 class="text-xl font-bold mb-4">Нужна консультация?</h3>
+                        <p class="mb-6 opacity-90">Запишитесь на бесплатную консультацию к нашим юристам и получите ответы на ваши вопросы</p>
+                        <a href="/consultation" class="btn-accent px-6 py-3 rounded-lg font-semibold inline-block w-full text-center">
+                            Записаться <i class="ml-2 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Остались вопросы?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">Задайте их нашим специалистам и получите квалифицированный ответ</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="/consultation" class="btn-accent px-8 py-4 rounded-lg font-bold text-lg">
+                    Задать вопрос юристу <i class="ml-2 fas fa-question-circle"></i>
+                </a>
+                <a href="/contact" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    Все контакты <i class="ml-2 fas fa-address-book"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
+
+    <script src="./../assets/js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('/components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+            
+            // Load footer
+            fetch('/components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+            
+            // Blog filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card[data-category]');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide blog cards based on filter
+                    blogCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Blog card hover effect
+            blogCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    if (this.style.display !== 'none') {
+                        this.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('blogSearch');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    
+                    blogCards.forEach(card => {
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        const excerpt = card.querySelector('p').textContent.toLowerCase();
+                        
+                        if (title.includes(searchTerm) || excerpt.includes(searchTerm) || searchTerm === '') {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            }
+            
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('form');
+            if (newsletterForm && newsletterForm.querySelector('input[type="email"]')) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    
+                    if (emailInput.value) {
+                        // Show loading state
+                        const originalText = submitBtn.innerHTML;
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Отправка...';
+                        submitBtn.disabled = true;
+                        
+                        // Simulate submission
+                        setTimeout(() => {
+                            // Reset form
+                            emailInput.value = '';
+                            
+                            // Reset button
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                            
+                            // Show success message (in real project, show a proper notification)
+                            alert('Спасибо за подписку! Проверьте вашу почту для подтверждения.');
+                        }, 1500);
+                    }
+                });
+            }
+            
+            // Pagination button functionality
+            const paginationBtns = document.querySelectorAll('.pagination-btn');
+            paginationBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all pagination buttons
+                    paginationBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // In a real project, this would load the corresponding page
+                    // For now, we'll just log to console
+                    console.log('Loading page for button:', this.textContent.trim());
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
