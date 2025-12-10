@@ -507,27 +507,10 @@
     <!-- Footer -->
     <footer id="footer" class="bg-gray-900 text-white py-12"></footer>
 
-    <script src="./../assets/js/main.js"></script>
-
     <!-- JavaScript -->
     <script>
         // Load header and footer dynamically
         document.addEventListener('DOMContentLoaded', function() {
-            // Load header
-            fetch('/components/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-            
-            // Load footer
-            fetch('/components/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
             
             // Value card hover effect
             const valueCards = document.querySelectorAll('.value-card');
@@ -567,6 +550,7 @@
         });
     </script>
 
+    <script src="/assets/js/main.js"></script>
 
 </body>
 </html>
